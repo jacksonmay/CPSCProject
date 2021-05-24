@@ -1,0 +1,299 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.home-btn {
+  margin-top: 30px !important;
+  padding: 10px 55px !important;
+}
+
+.home-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#titleBox {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 12%;
+}
+
+span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#title {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+}
+
+#login{
+  width: 250px;
+  height: 530px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+.investigation {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.investigation .info {
+  width: 10%;
+}
+
+.investigation .description {
+  width: 40%;
+  margin-right: 40px;
+}
+.investigation .response {
+  width: 40%;
+  margin-right: 40px;
+}
+
+.investigation .resolve {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.resolve .btn {
+  width: 90%;
+}
+
+.analytics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#authContainer {
+  width: 450px;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+#nameBox {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#showPass {
+  margin-top: 10px;
+  
+}
+
+#signInButtons {
+  padding: 0;
+  width: 100%;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 0px;
+  box-shadow: 0 0 20px 1px rgb(0 0 0 / 4%);
+  border-radius: 5em;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: #002868;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 70%;
+  font-size: 16px;
+}
+
+#error {
+  min-height: 50px;
+  display: block;
+  color: red; 
+  width: 100%;
+}
+
+#ok {
+  min-height: 50px;
+  display: block;
+  color: green; 
+  width: 100%;
+}
+
+#twofa {
+  margin-top: 10px;
+}
+
+#verify {
+  margin-top: 40px;
+}
+
+.signUp {
+  margin-top: 50px;
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+#signUpSubmit {
+   width: 180px !important; 
+}
+
+.investigationInput {
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#mission {
+  margin-bottom: 20px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.info {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  justify-content: center;
+}
+
+
+.info-item {
+  padding: 40px;
+  text-align: center;
+}
+
+.info h3 {
+  display: inline;
+}
+
+.info h2 {
+  margin-bottom: 20px;
+}
+
+
+#boomers {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#yearSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#yearSelect p {
+  display: inline;
+  margin-right: 15px;
+}
+
+#yearSelect select {
+  margin-top: -15px;
+}
+
+.sectionHead {
+  font-weight: 600;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-img-top {
+  max-height: 200px;
+  min-height: 200px;
+  object-fit: contain;
+}
+
+#largeScreenBrand {
+  display: none;
+}
+
+#smallScreenBrand {
+  margin: auto 0;
+}
+
+@media (min-width: 576px) { 
+  #smallScreenBrand {
+    display: none;
+  }
+  #largeScreenBrand {
+    display: inline;
+  }
+}
