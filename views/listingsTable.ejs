@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recall Listings</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand d-flex" href="/">
+      <img src="cpsc.png" class="mr-1"width="40" height="40" alt="">
+      <span id="largeScreenBrand">CONSUMER PRODUCT SAFETY COMMISSION</span>
+      <span id="smallScreenBrand">CPSC</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/submitInvestigation">Submit an Investigation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listingsTable">Recall Listings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/openInvestigations">Open Investigations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://eepurl.com/hwNuyD">CPSC Newsletter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/analytics">Analytics Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="vueApp">
+    <h1>Product Recall Listings in {{ year }} </h1>
+    <div id="yearSelect">
+      <p>Select a year to view recall listings from that year:</p>
+        <select id="year" name="year" @change="updateYear">
+          <option value="2000">2000</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+        </select>
+    </div>
+  
+    <div id="violationsContainer" class="container">
+      <div class="row">
+        <template v-for="(product, index) in violations">
+          <div class="card col-12 col-sm-6 col-md-4 col-lg-3 py-3">
+            <img class="card-img-top" :src="imgSrc(index)">
+            <div class="card-body">
+              <h5 class="card-title" >{{ name(index) }}</h5>
+              <span class="sectionHead">Recall ID: </span>
+              <p class="card-text">{{ id(index) }}</p>
+              <span class="sectionHead">Hazard: </span>
+              <p class="card-text">{{ hazard(index) }}</p>
+              <span class="sectionHead">Product Description: </span>
+              <p class="card-text">{{ description(index) }}</p>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="vue.js"></script>
+<script src="pass.js"></script>
+<script src="cards.js"></script>
+</body>
+</html>
+

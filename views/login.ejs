@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="cpsc.png" width="40" height="40" alt="">
+      CONSUMER PRODUCT SAFETY COMMISSION</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      </div>
+    </div>
+  </nav>
+  <div id="login" class="container">
+    <p id="title">Employee Login</p>
+    <form id="loginForm" action="/login" method="POST">
+      <div id="nameBox">
+        <span>Username:</span>
+        <input id="username" name="username" type="text">
+      </div>
+      <div id="passBox">
+        <span>Password:</span>
+        <input id="password" name="password" type="password">        
+      </div>
+      <input id="showPass" type="checkbox"> Show Password</input>
+    </form>
+    
+    <p id="error" style="color: <% if (!(typeof color == 'undefined')) { %><%= color %><% } %>"> <% if (!(typeof message == 'undefined')) { %><%= message %><% } %></p>
+    
+    <ul id="signInButtons">
+      <button class="btn btn-primary" type="submit" form="loginForm" value="Submit">Log In</button>
+      <a class="btn btn-primary" href="/createAccount">Create an Account</a>
+    </ul>
+    <a href="forgotPass">Forgot Password</a>
+  </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="pass.js"></script>
+</body>
+</html>
+
+

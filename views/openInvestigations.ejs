@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Investigations</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand d-flex" href="/">
+      <img src="cpsc.png" class="mr-1"width="40" height="40" alt="">
+      <span id="largeScreenBrand">CONSUMER PRODUCT SAFETY COMMISSION</span>
+      <span id="smallScreenBrand">CPSC</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/submitInvestigation">Submit an Investigation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listingsTable">Recall Listings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/openInvestigations">Open Investigations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://eepurl.com/hwNuyD">CPSC Newsletter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/analytics">Analytics Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="investigations">
+    <div class="investigation" v-for="i in investigations">
+      <div class="info">
+        <p><b>VID:</b></br> {{ i.VID }}</p>  
+      </div>
+      <div class="description">
+        <p><b>Customer Description: </b></br>{{ i.ViolationDescription }}</p>
+      </div>
+      <div class="response">
+        <p><b>Vendor Response: </b></br>{{ i.ViolationResponse }}</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="pass.js"></script>
+  <script src="vue.js"></script>
+
+<script>
+  window.app = new Vue({
+    el: '#investigations',
+    data: {
+      investigations : <%-JSON.stringify(data)%>
+    }
+  })
+</script>
+</body>
+</html>
+
+
